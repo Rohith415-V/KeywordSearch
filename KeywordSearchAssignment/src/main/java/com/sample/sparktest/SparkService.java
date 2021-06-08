@@ -14,7 +14,7 @@ public class SparkService implements Serializable {
 
 	public SparkSession getSparkSession() {
 		if (sparkSession == null) {
-			sparkSession = SparkSession.builder().appName("NumbersMath").master("local[*]")
+			sparkSession = SparkSession.builder().appName("KeywordSearch").master("local[*]")
 					.config("spark.dirver.memory", "20gb").config("spark.dirver.maxResultSize", "4gb")
 					.config("spark.dirver.cores", "2").config("spark.cores.max", "2").getOrCreate();
 		}
